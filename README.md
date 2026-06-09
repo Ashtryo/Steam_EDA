@@ -136,3 +136,5 @@ Based on the data, here is a strategic blueprint for success on Steam:
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/yourusername/Steam-Market-EDA.git](https://github.com/yourusername/Steam-Market-EDA.git)
+
+   Dataset: The raw and cleaned datasets are larger than GitHub's upload limit. You can download the data directly from My Google Drive:https://drive.google.com/file/d/1xW072PyFU94Xc1EeHz1Cbg7vtjIxj_zE/view?usp=drive_link
