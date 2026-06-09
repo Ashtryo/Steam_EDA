@@ -4,7 +4,7 @@
 
 # Steam Games EDA & Visualization Project
 ### Exploratory Data Analysis of Steam Marketplace Data
-**By:** Ansh Bansal
+# **By:** Ansh Bansal
 
 </div>
 
