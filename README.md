@@ -1,152 +1,423 @@
-## Dataset
-
-Due to GitHub file size limitations, the dataset is not included directly in this repository.
-
-📥 Download Dataset:
-https://drive.google.com/file/d/1xW072PyFU94Xc1EeHz1Cbg7vtjIxj_zE/view?usp=drive_link
-
-After downloading, place the dataset file in the project root directory:
-
-Steam-Games-EDA/
-│
-├── SteamGames.csv
-├── STEAM_ANALYSIS.ipynb
-├── README.md
+# 🎮 Steam Games Market Analysis & Exploratory Data Analysis
 
 <div align="center">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" width="120">
 
-# Steam Games EDA & Visualization Project
-### Exploratory Data Analysis of Steam Marketplace Data
-# **By:** Ansh Bansal
+## Comprehensive Exploratory Data Analysis of Steam Marketplace Data
+
+### By Ansh Bansal
 
 </div>
 
 ---
 
-## 📑 Table of Contents
-1. [Project Objective](#-project-objective)
-2. [Dataset Overview](#-dataset-overview)
-3. [Tech Stack](#-tech-stack)
-4. [A to Z EDA Process (Step-by-Step)](#-a-to-z-eda-process-step-by-step)
-5. [Key Questions Answered (Visualizations)](#-key-questions-answered-visualizations)
-6. [Major Findings & Conclusions](#-major-findings--conclusions)
-7. [Strategic Business Recommendations](#-strategic-business-recommendations)
-8. [How to Run This Project](#-how-to-run-this-project)
+# 📌 Project Overview
+
+The gaming industry has become one of the largest entertainment industries in the world, with Steam being the dominant digital distribution platform for PC games.
+
+This project performs a complete Exploratory Data Analysis (EDA) on Steam games data to uncover insights related to pricing, reviews, genres, developers, publishers, release patterns, hardware requirements, and overall marketplace trends.
+
+The goal of this analysis is to transform raw Steam marketplace data into actionable business insights that can help developers, publishers, analysts, and gaming businesses make informed decisions.
 
 ---
 
-## 🎯 Project Objective
-The core objective of this project is to analyze Steam games data to thoroughly understand pricing, reviews, genres, developers, publishers, and overall platform trends. This analysis is designed to uncover business insights that can help game developers and publishers make better data-driven decisions.
+# 📥 Dataset
+
+Due to GitHub file size limitations, the dataset is not included directly in this repository.
+
+### Download Dataset
+
+https://drive.google.com/file/d/1xW072PyFU94Xc1EeHz1Cbg7vtjIxj_zE/view?usp=drive_link
+
+After downloading, place the dataset in the project root directory:
+
+Steam-Games-EDA/
+
+├── SteamGames.csv
+
+├── STEAM_ANALYSIS.ipynb
+
+├── README.md
 
 ---
 
-## 📊 Dataset Overview
-This dataset contains extensive information about games available on the Steam platform, including game details, pricing, review metrics, hardware requirements, and user-generated tags. 
+# 📑 Table of Contents
 
-### Data Dictionary
-| Column | Description |
-| :--- | :--- |
-| **Appid** | Unique Steam application ID for each game |
-| **Name** | Name of the game |
-| **Type** | Type of Steam product (Game, DLC, etc.) |
-| **ReleaseDate** | Official release date of the game |
-| **Genres** | Genres associated with the game |
-| **Developers** | Developer(s) of the game |
-| **Publishers** | Publisher(s) of the game |
-| **Description** | Store description of the game |
-| **price** | Current price of the game |
-| **Thumbnail** | URL of the game's thumbnail image |
-| **Tags** | User-generated tags describing the game |
-| **ReviewScore** | Overall review score category |
-| **PositiveReview** | Number of positive reviews |
-| **NegativeReview** | Number of negative reviews |
-| **OsRequirement** | Operating system requirements |
-| **MemoryRequirement**| RAM requirement |
-| **CpuRequirement** | Processor requirement |
-| **Rank** | Steam ranking or popularity indicator |
+1. Project Objective
+2. Dataset Overview
+3. Project Preview
+4. Tech Stack
+5. Data Cleaning & Preprocessing
+6. Feature Engineering
+7. Exploratory Data Analysis
+8. Key Questions Answered
+9. Major Findings
+10. Business Recommendations
+11. Skills Demonstrated
+12. Future Improvements
+13. Project Structure
+14. Installation & Usage
 
 ---
 
-## 💻 Tech Stack
-* **Language:** Python
-* **Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `re` (Regular Expressions)
+# 🎯 Project Objective
+
+The primary objective of this project is to analyze Steam marketplace data and identify meaningful patterns in:
+
+* Game Pricing
+* User Reviews
+* Genre Popularity
+* Publisher Performance
+* Developer Trends
+* Release Behavior
+* Hardware Requirements
+* Free-to-Play Growth
+* Multiplayer Adoption
+
+The project aims to answer important business questions using data-driven analysis and visualizations.
 
 ---
 
-## 🛠️ A to Z EDA Process (Step-by-Step)
-The following data cleaning and feature engineering steps were executed in exact notebook order to ensure data integrity:
+# 📊 Dataset Overview
 
-1. **Import libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `re`.
-2. **Load dataset** from `SteamGames.csv` into a dataframe.
-3. **Initial peek:** Utilized `head()`, `tail()`, and `sample()` for an unbiased understanding.
-4. **Structure checks:** Reviewed `shape`, `columns`, `info()`, and `describe()`.
-5. **Missing & duplicates:** Checked with `isnull().sum()` and `duplicated().sum()`.
-6. **Drop unnecessary columns:** Removed the `Thumbnail` column as it does not contribute to the analysis.
-7. **Clean data:** Removed '$' from `price` and converted it to float; parsed `ReleaseDate` into datetime.
-8. **Drop missing values:** Removed rows missing `ReleaseDate`.
-9. **Filter products:** Filtered `Type` to keep only `game` and `dlc`.
-10. **Drop missing categories:** Dropped rows missing `Genres`.
-11. **Fill missing metadata:** Filled missing `Developers`, `Publishers` with "Unknown", and provided placeholders for missing `Description` and `Tags`.
-12. **Normalize text data:** Standardized OS requirements using dictionary replacements and a complex normalization function utilizing regular expressions.
-13. **Fill missing hardware requirements:** Filled `MemoryRequirement` and `CpuRequirement` with 'Not Specified'.
-14. **Feature engineering:** Created highly actionable features including `TotalReviews`, `ReleaseYear`, `ReleaseMonth`, `IsFree`, `Pos_Ratio`, and `ReleaseDay`.
-15. **Export:** Saved the cleaned dataset to `Cleaned_SteamGames.csv`.
+### Dataset Information
 
----
+| Metric   | Value                  |
+| -------- | ---------------------- |
+| Records  | ~29,931 Games          |
+| Features | 18 Columns             |
+| Domain   | Gaming Industry        |
+| Source   | Steam Marketplace Data |
 
-## 🔍 Key Questions Answered (Visualizations)
-During the exploratory data analysis phase, several critical market questions were addressed:
+### Dataset Columns
 
-* **What is the standard distribution of game prices?** Most games are priced under $10.
-* **What proportion is Free-to-Play?** 15-20% of games are free.
-* **Does making a game more expensive lead to harsher reviews?** Yes, the variance in positive reviews widens as prices approach $60.
-* **How is player attention distributed?** Steam is a "Winner-Takes-All" economy where a tiny fraction captures 90% of reviews.
-* **Do Free games get better reviews than Paid games?** Paid games usually score better, as Free games are prone to review bombing.
-* **Has release volume increased?** Yes, the market exploded after 2014, leading to hyper-saturation.
-* **Which month/day is most competitive?** October and November are the most congested months. Tuesday and Thursday dominate release days.
-* **What are the most saturated genres?** "Action", "Indie", and "Adventure".
-* **Which genres generate the most total revenue?** "Action" and "RPG".
-* **Do Multiplayer games command a higher price?** Yes, the inclusion of multiplayer servers allows developers to charge a higher premium.
-* **How have minimum RAM requirements evolved?** They shifted from 2GB in 2010 to an average minimum of 7GB by 2026.
+| Column            | Description           |
+| ----------------- | --------------------- |
+| Appid             | Unique Steam Game ID  |
+| Name              | Game Name             |
+| Type              | Product Type          |
+| ReleaseDate       | Release Date          |
+| Genres            | Game Genres           |
+| Developers        | Developer Information |
+| Publishers        | Publisher Information |
+| Description       | Game Description      |
+| Price             | Game Price            |
+| Thumbnail         | Thumbnail URL         |
+| Tags              | Steam User Tags       |
+| ReviewScore       | Review Category       |
+| PositiveReview    | Positive Reviews      |
+| NegativeReview    | Negative Reviews      |
+| OsRequirement     | OS Requirement        |
+| MemoryRequirement | RAM Requirement       |
+| CpuRequirement    | CPU Requirement       |
+| Rank              | Steam Ranking         |
 
 ---
 
-## 🏆 Major Findings & Conclusions
+# 📸 Project Preview
 
-### 1. Market Saturation & Pricing Dynamics
-* **Winner-Takes-All Reality:** A handful of viral hits capture nearly all player attention, leaving most titles overlooked.
-* **Crowded Low-Price Tier:** The market under $10 is crowded. Breaking into the $20+ premium tier requires strong marketing or an established IP.
-* **Revenue Concentration:** Most estimated revenue comes from titles priced between $30–$60.
+Add your best visualization screenshots here.
 
-### 2. Player Sentiment & Reviews
-* **Premium Punishment:** At the $60 AAA tier, players are far less forgiving of bugs and issues.
-* **Early Access Forgiveness:** Players cut developers slack when a game is labeled *Early Access*, tolerating bugs as a work-in-progress.
+Example:
 
-### 3. Genre & Mechanics Insights
-* **Saturated vs. Lucrative:** While *Indie* has the highest game count, *Action* and *RPG* dominate actual revenue.
-* **Singleplayer Demand:** *Singleplayer* remains the most common user tag.
+![Price Distribution](images/price_distribution.png)
 
-### 4. Temporal & Release Trends
-* **No Weekend Rule:** Developers avoid weekends to catch press outlets and Steam’s algorithm during business hours.
-* **Hardware Evolution:** Minimum RAM requirements have steadily climbed—from 2GB (2010) to ~7GB (2026).
+![Genre Analysis](images/genre_analysis.png)
+
+![Review Analysis](images/review_analysis.png)
+
+![Correlation Heatmap](images/correlation_heatmap.png)
 
 ---
 
-## 💡 Strategic Business Recommendations
-Based on the data, here is a strategic blueprint for success on Steam:
+# 💻 Tech Stack
 
-1. **Optimize Release Timing:** Avoid October–November if you are indie or mid-sized. Launch in Q1 or Q2 for better visibility, specifically on a Tuesday or Thursday.
-2. **Target the Golden Revenue Formula:** Aim for the $30–$60 tier and blend Action + RPG mechanics with Multiplayer/Co-op to maximize returns.
-3. **Set Modern Hardware Baselines:** Stop optimizing for outdated 4GB RAM machines; design with 8GB RAM as the minimum baseline.
-4. **Use Early Access Wisely:** If QA resources are limited, launch in Early Access to shield your rating while fixing bugs.
-5. **Quality & Brand > Quantity:** Flooding the market doesn't guarantee success. Focus on polished games and building a strong brand reputation.
+### Programming Language
+
+* Python
+
+### Libraries
+
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Regular Expressions (re)
+
+### Tools
+
+* Jupyter Notebook
+* Git
+* GitHub
 
 ---
 
-## 🚀 How to Run This Project
+# 🧹 Data Cleaning & Preprocessing
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/yourusername/Steam-Market-EDA.git](https://github.com/yourusername/Steam-Market-EDA.git)
+The dataset was cleaned and transformed through the following steps:
+
+1. Imported required libraries
+2. Loaded Steam dataset
+3. Performed initial exploration
+4. Checked dataset structure
+5. Identified missing values
+6. Identified duplicate records
+7. Removed unnecessary columns
+8. Cleaned price column
+9. Converted release dates to datetime
+10. Filtered valid game types
+11. Handled missing genres
+12. Filled missing developer information
+13. Filled missing publisher information
+14. Standardized operating system requirements
+15. Normalized text fields
+16. Filled missing hardware requirements
+17. Exported cleaned dataset
+
+---
+
+# ⚙️ Feature Engineering
+
+Several new analytical features were created:
+
+### Total Reviews
+
+TotalReviews = PositiveReview + NegativeReview
+
+Used to measure player engagement.
+
+### Review Positivity Ratio
+
+Pos_Ratio = PositiveReview / TotalReviews
+
+Used to estimate player satisfaction.
+
+### Release Features
+
+* ReleaseYear
+* ReleaseMonth
+* ReleaseDay
+
+### Free-to-Play Flag
+
+IsFree
+
+Used to separate paid and free games.
+
+### Revenue Proxy
+
+Revenue_Proxy = Price × TotalReviews
+
+Used as an estimated commercial performance metric.
+
+Note: This is not actual revenue.
+
+---
+
+# 📈 Exploratory Data Analysis
+
+The notebook investigates multiple business and market questions through visualizations and statistical analysis.
+
+Major areas analyzed:
+
+* Price Distribution
+* Review Distribution
+* Revenue Patterns
+* Genre Analysis
+* Publisher Analysis
+* Developer Analysis
+* Release Trends
+* Free-to-Play Growth
+* Multiplayer Trends
+* Early Access Analysis
+* Hardware Evolution
+* Correlation Analysis
+
+---
+
+# 🔍 Key Questions Answered
+
+### Pricing Analysis
+
+* What is the distribution of game prices?
+* What percentage of games are free?
+
+### Review Analysis
+
+* Do expensive games receive better reviews?
+* How are reviews distributed?
+
+### Market Analysis
+
+* How has Steam grown over time?
+* Which genres dominate the platform?
+
+### Business Analysis
+
+* Which genres generate the highest revenue potential?
+* Which publishers dominate the marketplace?
+
+### Technical Analysis
+
+* How have RAM requirements evolved?
+* How have hardware requirements changed?
+
+---
+
+# 🏆 Major Findings
+
+### Market Insights
+
+* Most Steam games are priced below $10.
+* Free-to-Play games represent a significant share of the platform.
+* Steam releases increased dramatically after 2014.
+
+### Customer Insights
+
+* Most player attention is concentrated among a small number of games.
+* Higher prices do not automatically guarantee better reviews.
+* Early Access titles often maintain strong positivity ratios.
+
+### Genre Insights
+
+* Action, Adventure, RPG, and Indie dominate the platform.
+* Action and RPG genres show strong commercial potential.
+
+### Technical Insights
+
+* RAM requirements have increased steadily over time.
+* Modern games require significantly more hardware resources.
+
+---
+
+# 💡 Strategic Business Recommendations
+
+### 1. Release Timing
+
+Avoid highly competitive launch periods when possible and analyze seasonal release patterns before publishing.
+
+### 2. Pricing Strategy
+
+Carefully position products in premium tiers only when sufficient value is delivered.
+
+### 3. Genre Selection
+
+Combine high-demand genres with strong market potential.
+
+### 4. Multiplayer Features
+
+Multiplayer functionality can increase perceived value and pricing flexibility.
+
+### 5. Early Access Strategy
+
+Use Early Access strategically to gather feedback and improve product quality.
+
+---
+
+# 📈 Key Results Summary
+
+| Analysis Area      | Key Finding                 |
+| ------------------ | --------------------------- |
+| Price Distribution | Most games priced below $10 |
+| Free Games Share   | Significant market presence |
+| Genre Leader       | Action                      |
+| Revenue Potential  | Action & RPG                |
+| Market Growth      | Rapid expansion after 2014  |
+| Hardware Trend     | RAM requirements increasing |
+
+---
+
+# 🎓 Skills Demonstrated
+
+* Data Cleaning
+* Data Wrangling
+* Exploratory Data Analysis
+* Feature Engineering
+* Statistical Analysis
+* Data Visualization
+* Business Analytics
+* Python Programming
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+
+---
+
+# 🔮 Future Improvements
+
+Potential future enhancements include:
+
+* Revenue Prediction Models
+* Review Score Prediction
+* Steam Recommendation System
+* Interactive Dashboard (Power BI/Tableau)
+* Market Trend Forecasting
+* Machine Learning Applications
+
+---
+
+# 📁 Project Structure
+
+Steam-Games-EDA/
+
+├── SteamGames.csv
+
+├── STEAM_ANALYSIS.ipynb
+
+├── README.md
+
+├── requirements.txt
+
+└── images/
+
+    ├── price_distribution.png
+
+    ├── genre_analysis.png
+
+    ├── review_analysis.png
+
+    └── correlation_heatmap.png
+
+---
+
+# 🚀 Installation & Usage
+
+### Clone Repository
+
+git clone https://github.com/yourusername/Steam-Games-EDA.git
+
+### Navigate to Project
+
+cd Steam-Games-EDA
+
+### Install Dependencies
+
+pip install pandas numpy matplotlib seaborn
+
+### Run Jupyter Notebook
+
+jupyter notebook
+
+Open:
+
+STEAM_ANALYSIS.ipynb
+
+and run all cells sequentially.
+
+---
+
+# 👨‍💻 Author
+
+Ansh Bansal
+
+Aspiring Data Analyst passionate about transforming raw data into meaningful business insights through analytics, visualization, and data-driven decision making.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a star.
+
+Star ⭐ the repository if you learned something from this analysis.
