@@ -28,36 +28,40 @@ Due to GitHub file size limitations, the dataset is not included directly in thi
 
 ### Download Dataset
 
+📥 **Dataset Link**
+
 https://drive.google.com/file/d/1xW072PyFU94Xc1EeHz1Cbg7vtjIxj_zE/view?usp=drive_link
 
 After downloading, place the dataset in the project root directory:
 
+```text
 Steam-Games-EDA/
 
 ├── SteamGames.csv
-
 ├── STEAM_ANALYSIS.ipynb
-
 ├── README.md
+```
 
 ---
 
 # 📑 Table of Contents
 
-1. Project Objective
-2. Dataset Overview
-3. Project Preview
+1. Project Overview
+2. Project Objective
+3. Dataset Overview
 4. Tech Stack
 5. Data Cleaning & Preprocessing
 6. Feature Engineering
 7. Exploratory Data Analysis
 8. Key Questions Answered
 9. Major Findings
-10. Business Recommendations
-11. Skills Demonstrated
-12. Future Improvements
-13. Project Structure
-14. Installation & Usage
+10. Strategic Business Recommendations
+11. Key Results Summary
+12. Skills Demonstrated
+13. Future Improvements
+14. Project Structure
+15. Requirements
+16. Installation & Usage
 
 ---
 
@@ -163,17 +167,21 @@ The dataset was cleaned and transformed through the following steps:
 
 # ⚙️ Feature Engineering
 
-Several new analytical features were created:
+Several new analytical features were created.
 
 ### Total Reviews
 
+```python
 TotalReviews = PositiveReview + NegativeReview
+```
 
 Used to measure player engagement.
 
 ### Review Positivity Ratio
 
+```python
 Pos_Ratio = PositiveReview / TotalReviews
+```
 
 Used to estimate player satisfaction.
 
@@ -185,17 +193,21 @@ Used to estimate player satisfaction.
 
 ### Free-to-Play Flag
 
+```python
 IsFree
+```
 
 Used to separate paid and free games.
 
 ### Revenue Proxy
 
-Revenue_Proxy = Price × TotalReviews
+```python
+Revenue_Proxy = Price * TotalReviews
+```
 
 Used as an estimated commercial performance metric.
 
-Note: This is not actual revenue.
+> Note: This is not actual revenue.
 
 ---
 
@@ -344,15 +356,25 @@ Potential future enhancements include:
 
 # 📁 Project Structure
 
+```text
 Steam-Games-EDA/
 
-├── SteamGames.csv
-
 ├── STEAM_ANALYSIS.ipynb
-
 ├── README.md
-
 ├── requirements.txt
+└── .gitignore
+```
+
+---
+
+# 📦 Requirements
+
+* Python 3.x
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* jupyter
 
 ---
 
@@ -360,23 +382,33 @@ Steam-Games-EDA/
 
 ### Clone Repository
 
-git clone https://github.com/yourusername/Steam-Games-EDA.git
+```bash
+git clone https://github.com/Ashtryo/Steam-Games-EDA.git
+```
 
 ### Navigate to Project
 
+```bash
 cd Steam-Games-EDA
+```
 
 ### Install Dependencies
 
+```bash
 pip install pandas numpy matplotlib seaborn
+```
 
 ### Run Jupyter Notebook
 
+```bash
 jupyter notebook
+```
 
 Open:
 
+```text
 STEAM_ANALYSIS.ipynb
+```
 
 and run all cells sequentially.
 
@@ -384,7 +416,7 @@ and run all cells sequentially.
 
 # 👨‍💻 Author
 
-Ansh Bansal
+**Ansh Bansal**
 
 Aspiring Data Analyst passionate about transforming raw data into meaningful business insights through analytics, visualization, and data-driven decision making.
 
@@ -394,4 +426,4 @@ Aspiring Data Analyst passionate about transforming raw data into meaningful bus
 
 If you found this project useful, please consider giving it a star.
 
-Star ⭐ the repository if you learned something from this analysis.
+**Star ⭐ the repository if you learned something from this analysis.**
