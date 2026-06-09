@@ -354,16 +354,6 @@ Steam-Games-EDA/
 
 ├── requirements.txt
 
-└── images/
-
-    ├── price_distribution.png
-
-    ├── genre_analysis.png
-
-    ├── review_analysis.png
-
-    └── correlation_heatmap.png
-
 ---
 
 # 🚀 Installation & Usage
