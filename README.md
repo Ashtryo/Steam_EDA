@@ -57,6 +57,7 @@ This dataset contains extensive information about games available on the Steam p
 ## 💻 Tech Stack
 * **Language:** Python
 * **Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `re` (Regular Expressions)
+* **ChatBot** `ChatGPT`,`Gemini`
 
 ---
 
