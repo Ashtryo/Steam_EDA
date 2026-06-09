@@ -115,22 +115,6 @@ The project aims to answer important business questions using data-driven analys
 
 ---
 
-# 📸 Project Preview
-
-Add your best visualization screenshots here.
-
-Example:
-
-![Price Distribution](https://github.com/Ashtryo/Steam_EDA/blob/main/images/output%202.png)
-
-![Genre Analysis](images/genre_analysis.png)
-
-![Review Analysis](images/review_analysis.png)
-
-![Correlation Heatmap](images/correlation_heatmap.png)
-
----
-
 # 💻 Tech Stack
 
 ### Programming Language
