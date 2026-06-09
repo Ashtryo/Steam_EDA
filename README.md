@@ -110,7 +110,7 @@ During the exploratory data analysis phase, several critical market questions we
 * **What are the most saturated genres?** "Action", "Indie", and "Adventure".
 * **Which genres generate the most total revenue?** "Action" and "RPG".
 * **Do Multiplayer games command a higher price?** Yes, the inclusion of multiplayer servers allows developers to charge a higher premium.
-* **How have minimum RAM requirements evolved?** They shifted from 2GB in 2010 to an average minimum of 7GB by 2024.
+* **How have minimum RAM requirements evolved?** They shifted from 2GB in 2010 to an average minimum of 7GB by 2026.
 
 ---
 
@@ -131,7 +131,7 @@ During the exploratory data analysis phase, several critical market questions we
 
 ### 4. Temporal & Release Trends
 * **No Weekend Rule:** Developers avoid weekends to catch press outlets and Steam’s algorithm during business hours.
-* **Hardware Evolution:** Minimum RAM requirements have steadily climbed—from 2GB (2010) to ~7GB (2024).
+* **Hardware Evolution:** Minimum RAM requirements have steadily climbed—from 2GB (2010) to ~7GB (2026).
 
 ---
 
