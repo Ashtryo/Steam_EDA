@@ -121,7 +121,7 @@ Add your best visualization screenshots here.
 
 Example:
 
-![Price Distribution](images/price_distribution.png)
+![Price Distribution](https://github.com/Ashtryo/Steam_EDA/blob/main/images/output%202.png)
 
 ![Genre Analysis](images/genre_analysis.png)
 
