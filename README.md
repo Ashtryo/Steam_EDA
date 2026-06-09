@@ -1,4 +1,18 @@
-Dataset: The raw and cleaned datasets are larger than GitHub's upload limit. You can download the data directly from My Drive:https://drive.google.com/file/d/1xW072PyFU94Xc1EeHz1Cbg7vtjIxj_zE/view?usp=drive_link
+## Dataset
+
+Due to GitHub file size limitations, the dataset is not included directly in this repository.
+
+📥 Download Dataset:
+https://drive.google.com/file/d/1xW072PyFU94Xc1EeHz1Cbg7vtjIxj_zE/view?usp=drive_link
+
+After downloading, place the dataset file in the project root directory:
+
+Steam-Games-EDA/
+│
+├── SteamGames.csv
+├── STEAM_ANALYSIS.ipynb
+├── README.md
+
 <div align="center">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" width="120">
